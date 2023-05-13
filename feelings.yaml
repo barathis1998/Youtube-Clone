@@ -1,0 +1,44 @@
+openapi: 3.0.0
+info:
+  title: Feeling Controller
+  version: 1.0.0
+servers:
+  - url: http://localhost:9002
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+paths:
+  /feelings/:
+    post:
+      tags:
+        - default
+      summary: New Request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                videoId: 643dac0b19122b990bc46038
+                type: like
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json: {}
+  /feelings/videos:
+    get:
+      tags:
+        - default
+      summary: getLikedVideos
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json: {}

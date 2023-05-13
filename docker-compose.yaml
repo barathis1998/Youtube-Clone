@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  backend:
+    build: ./backend
+    container_name: utube_backend
+    ports:
+      - 9002:9002
+  frontend:
+    build: ./frontend/utube
+    container_name: utube_frontend
+    ports:
+      - 3000:3000
+    stdin_open: true
+    tty: true
+

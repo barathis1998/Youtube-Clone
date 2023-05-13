@@ -1,0 +1,141 @@
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #dddddd;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  top:0px;
+  .container {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    .youtube-icon {
+      color: #ff0000;
+      font-size: 30px;
+      margin-right: 24px;
+    }
+    form {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      position: relative;
+      left: 25%;
+      max-width: 800px;
+      position: relative;
+      left:25%;
+      .search-field {
+        flex-grow: 1;
+        padding: 8px 12px;
+        font-size: 16px;
+        border: none;
+        border-radius: 20px;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+        &:focus {
+          outline: none;
+          box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+        }
+      }
+      .search-btn {
+        margin-left: 30px;
+        margin-top:5px;
+        padding: 8px 24px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #ffffff;
+        background-color: #ff0000;
+        border: none;
+        border-radius: 20px;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.2s ease;
+        &:hover {
+          background-color: #e60000;
+        }
+      }
+      .menu-btn {
+        margin-left: 136px;
+        padding: 8px;
+        border: none;
+        border-radius: 50%;
+        background-color: transparent;
+        transition: background-color 0.2s ease;
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.05);
+        }
+        svg {
+          color: #606060;
+          transition: color 0.2s ease;
+          &:hover {
+            color: #ff0000;
+          }
+        }
+      }
+      
+    }
+    .navbar-spacing {
+      flex-grow: 1;
+    }
+  }
+}
+
+.logo {
+  position: relative;
+  width: 50px; /* change to desired width */
+  height: auto; /* set height to auto to maintain aspect ratio */
+  margin-right: 20px; 
+  z-index: 99;
+}
+
+#efFXN8MZniH1 path {
+  opacity: 0;
+  animation: fillDraw 2s forwards;
+}
+
+@keyframes fillDraw {
+  0% {
+    opacity: 0;
+    fill: transparent;
+    stroke: #093b8e;
+    stroke-width: 0;
+  }
+  50% {
+    opacity: 1;
+    fill: url(#efFXN8MZniH2-fill);
+    stroke-width: 2;
+  }
+  100% {
+    opacity: 1;
+    fill: url(#efFXN8MZniH2-fill);
+    stroke-width: 0;
+  }
+}
+
+.user-account-button {
+  position: absolute;
+  right:10px;
+  margin-left: 200px;
+  padding: 8px;
+  font-size: 20px;
+  color: #606060;
+  background-color: transparent;
+  border: none;
+  margin-right: auto;
+  border-radius: 100%;
+  width: 45px;
+  background-color: orange;
+  color:white;
+  transition: background-color 0.2s ease;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.searchForm {
+  width: 1920px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+}
+
+
+

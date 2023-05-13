@@ -1,0 +1,107 @@
+openapi: 3.0.0
+info:
+  title: Video Controller
+  version: 1.0.0
+servers:
+  - url: http://localhost:9002
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+paths:
+  /videos/:
+    post:
+      tags:
+        - default
+      summary: Upload Video
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                video:
+                  type: string
+                  format: binary
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json: {}
+    get:
+      tags:
+        - default
+      summary: get all
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json: {}
+  /videos/643dac0b19122b990bc46038:
+    get:
+      tags:
+        - default
+      summary: Video by Id
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json: {}
+  /videos/643c2c1f7e18cc40f4c53c63/views:
+    put:
+      tags:
+        - default
+      summary: Update Views
+      requestBody:
+        content: {}
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json: {}
+  /videos/643c2c1f7e18cc40f4c53c63/thumbnail:
+    put:
+      tags:
+        - default
+      summary: Upload Thumbnail
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                image:
+                  type: string
+                  format: binary
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json: {}
+  /videos/videoByUser:
+    get:
+      tags:
+        - default
+      summary: getVideoByUser
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json: {}
+  /videos/644054c9074a7394aa822c4a:
+    delete:
+      tags:
+        - default
+      summary: delete Video
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json: {}

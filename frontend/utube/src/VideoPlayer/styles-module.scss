@@ -1,0 +1,167 @@
+/* Video Player */
+
+$name-color: #333;
+$button-color: #ff0000;
+$button-hover-color: #cc0000;
+.vdo {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.vdo-container{
+  position: relative;
+  top:100px;
+}
+
+.vdo source {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.thumb-container {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.liked,
+.disliked {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.up-btn,
+.down-btn {
+  background: none;
+  border: none;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.up,
+.down {
+  font-size: 1.5rem;
+  color: #606060;
+}
+
+.up:hover,
+.up:focus,
+.up:active,
+.down:hover,
+.down:focus,
+.down:active {
+  color: #cc0000;
+}
+
+.vdo-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.channel-name {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.btn {
+  border: none;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #cc0000;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #a70000;
+}
+
+/* Comments Section */
+
+.comments-div {
+  margin-top: 2rem;
+}
+
+.comments-div p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 10px;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.comments {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.btn-comment {
+  border: none;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #606060;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-top: 1rem;
+}
+
+.btn-comment:hover,
+.btn-comment:focus {
+  background-color: #484848;
+}
+
+.name-subs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+
+  .channel-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: $name-color;
+    margin-right: 1rem;
+    line-height: 3;
+  }
+
+  .btn {
+    background-color: $button-color;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    line-height: 1.5;
+
+    &:hover {
+      background-color: $button-hover-color;
+    }
+  }
+}
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+
+

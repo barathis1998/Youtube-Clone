@@ -1,0 +1,9 @@
+.video-container{
+    position: absolute;
+    left: 300px;
+    top: 50px;
+    display: flex;
+    flex-direction: row;
+    gap:50px;
+    flex-wrap: wrap;
+}

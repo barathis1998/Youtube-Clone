@@ -1,0 +1,93 @@
+// .card{
+//     height: auto;
+//     width: 600px;
+//     margin: 40px;
+//     border: 1 px solid black;
+// }
+
+
+// UploadForm.scss
+
+$primary-color: #007bff;
+
+.row {
+  margin-top: 30px;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  background-color: $primary-color;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 15px;
+}
+
+.card-body {
+  padding: 20px;
+  background-color: #f8f4f4;
+}
+
+.form-control {
+  border: 1px solid #ccc;
+  border-radius: 0;
+}
+
+.btn-primary {
+  background-color: $primary-color;
+  border: none;
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+.video-list {
+  list-style: none;
+  padding: 0;
+}
+
+.video-list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.video-thumbnail {
+  width: 120px;
+  height: 90px;
+  background-color: #ccc;
+  margin-right: 20px;
+}
+
+.video-details {
+  flex-grow: 1;
+}
+
+.video-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.video-metadata {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #999;
+}
+
+.video-metadata-item {
+  margin-right: 20px;
+}
+
+.video-delete-btn {
+  background-color: #dc3545;
+  border: none;
+  color: #fff;
+  &:hover {
+    background-color: darken(#dc3545, 10%);
+  }
+}

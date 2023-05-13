@@ -1,0 +1,67 @@
+openapi: 3.0.3
+info:
+  title: User functionality API
+  description: User functionality API can be used for creating, view, updating and deleting user
+  version: 1.0.0
+paths:
+  /users/{user_id}:
+    get:
+      operationId: get User
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Returns single user for that id
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "401":
+          description: Authentication Error
+          content:
+            application/json:
+              schema:
+                type: object
+  /users:
+    post:
+      requestBody:
+        description: sign up user
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/User"
+      responses:
+        "201":
+          description: Created a user successfully
+        "401":
+          description: Authentication Error
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Course object identifier
+          example: 12
+        name:
+          type: string
+          description: User Name
+          example: Aishwarya
+        email:
+          type: string
+          description: email id
+          example: aishwaryavenkatesan22@gmail.com
+        password:
+          type: string
+          description: password
+          example: "*******"

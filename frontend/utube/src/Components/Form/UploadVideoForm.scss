@@ -1,0 +1,83 @@
+/* .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+  }
+  
+  input[type="file"] {
+    margin-top: 0.5rem;
+  }
+  
+  button[type="submit"] {
+    margin-top: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0069d9;
+  }
+   */
+
+
+   .form-group {
+    margin-bottom: 1rem;
+
+    input:hover{
+      background-color:#ADD8E6
+      ;
+    }
+  
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5rem; // add some margin below the label
+    }
+  
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 0.25rem;
+      border: 1px solid #ccc;
+      transition: border-color 0.2s ease-in-out; // add a transition effect to the border color
+      &:focus {
+        outline: none;
+        border-color: #007bff; // change the border color on focus
+      }
+    }
+  
+    input[type="file"] {
+      margin-top: 0.5rem;
+    }
+  
+    button[type="submit"] {
+      margin-top: 1rem;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 0.25rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out; // add a transition effect to the background color
+      &:hover {
+        background-color: #0069d9; // change the background color on hover
+      }
+    }
+  }
+  
